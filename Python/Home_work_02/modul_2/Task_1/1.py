@@ -9,3 +9,4 @@ if choise == 1:
     print (x+y+z,'the sum of your numbers')
 else:
     print (x*y*z,'product of your numbers')
+#done

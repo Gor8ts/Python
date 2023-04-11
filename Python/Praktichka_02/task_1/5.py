@@ -14,6 +14,6 @@ if choice == 1:
 elif choice == 2:
     print ('Різниця ваших чисел:',x-y)
 elif choice == 3:
-    print ('Середнє арифметичне:',x+y/2)
+    print ('Середнє арифметичне:',(x+y)/2)
 else:
     print ('Добуток дорівнює:', x*y)
