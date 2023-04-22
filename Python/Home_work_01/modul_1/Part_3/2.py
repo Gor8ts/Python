@@ -1,7 +1,13 @@
-a = int(input('enter number:'))
-b = int(input('enter number:'))
-c = int(input('enter number:'))
-d = int(input('enter number:'))
-i = a*b*c*d
-print('product of your numbers:',i)
-'done'
+a = int(input('enter a four digit number:'))
+b = a%10
+a = a//10
+c = a%10
+a = a//10
+d = a%10
+a = a//10
+e = a%10
+
+print('product of your numbers:',b*c*d*e)
+# done Пользователь вводит с клавиатуры число, состоящее из четырех цифр.
+# Требуется найти произведение цифр. 
+# Например, если с клавиатуры введено 1324, тогда результат произведения 1*3*2*4 = 24.
