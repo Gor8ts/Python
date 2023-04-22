@@ -7,21 +7,21 @@ print ('2-withdraw on the screen at least three')
 print ('3-withdraw on the screen the arithmetic mean of three numbers')
 choise = float (input ('Please enter number your choise:'))
 if choise == 1:
-    if x<y>z:
+    if x<=y>=z:
         print (y,'largest number')
-    elif y<x>z:
+    elif y<=x>=z:
         print (x,'largest number')
-    elif x<z>y:
+    elif x<=z>=y:
         print (z,'largest number')
     else:
         print ('мабуть ващі числа дорівнюють одне одному')
 elif choise == 2:
-    if x>y<z:
-        print (y,'largest number')
-    elif y>x<z:
-        print (x,'largest number')
-    elif x>z<y:
-        print (z,'largest number')
+    if x>=y<=z:
+        print (y,'smallest number')
+    elif y>=x<=z:
+        print (x,'smallest number')
+    elif x>=z<=y:
+        print (z,'smallest number')
     else:
         print ('мабуть ващі числа дорівнюють одне одному')
 elif choise == 3:
