@@ -13,14 +13,14 @@ if e < s:
 
 s0 = s
 
-while s < e:
+while s <= e:
     print (s, end = ' ')
     s += 1
 print ('\n')
 
 e0 = e
 s = s0
-e -= 1
+# e -= 1
 while s <= e:
     print (e, end = ' ')
     e -= 1

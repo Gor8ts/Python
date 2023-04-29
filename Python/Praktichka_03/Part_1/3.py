@@ -1,7 +1,11 @@
+# Пользователь вводит с клавиатуры два числа. Нужно 
+# показать все четные числа в указанном диапазоне.
+
+
 a = int (input ('enter number:'))
 b = int (input ('enter second number:'))
 a += 1
 while a < b:
-    if a % 2 ==0:
-        print (a)
+    if a % 2 == 0:
+        print (a, end = ' ')
     a += 1
