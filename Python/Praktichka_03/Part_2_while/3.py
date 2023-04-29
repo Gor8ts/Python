@@ -4,9 +4,20 @@
 # Например, если было введено 7, тогда вывод на экран 
 # будет такой: *******.
 
-
 a = int(input ('enter start cycle:'))
 b = '*'
 
-for i in range (a):
-    print (b,end = '')
+while a > 0:
+    
+    print (b, end = '')
+    a -= 1
+
+
+
+
+
+# a = int(input ('enter start cycle:'))
+# b = '*'
+
+# for i in range (a):
+#     print (b,end = '')

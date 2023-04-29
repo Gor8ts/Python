@@ -10,9 +10,16 @@
 #                         %
 #                         %
 
+# a = int(input ('enter start cycle:'))
+# b = input ('enter symbol:')
+
+# for i in range (a):
+#     print (b)
+
 a = int(input ('enter start cycle:'))
 b = input ('enter symbol:')
 
-for i in range (a):
+while a > 0:
+    
     print (b)
-
+    a -= 1
