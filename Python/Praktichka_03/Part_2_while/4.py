@@ -8,5 +8,11 @@
 a = int(input ('enter start cycle:'))
 b = input ('enter symbol:')
 
-for i in range (a):
-    print (b,end = '')
+while a > 0:
+    print (b, end = '')
+    a -= 1
+
+
+
+# for i in range (a):
+    # print (b,end = '')
