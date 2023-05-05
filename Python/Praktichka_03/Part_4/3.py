@@ -11,7 +11,7 @@ c = ' '
 print (a*s)
 
 for i in range (0,s-2):
-    print (b + (c*(s-2))+b)
+    print (b + (c*(s-2)) + b)
 
 print (a*s)
 

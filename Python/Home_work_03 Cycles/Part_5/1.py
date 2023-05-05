@@ -3,43 +3,101 @@
 
 a = '*'
 b = ' '
-# i = 0
-# print ('Вітаю, у мене е фігури які я можу вивести на єкран. \n Вони позначаються буквами а,б,в,г,д.')
-# choise = input ('Введіть ваш вибір:')
-# if choise == 'a':
-#     while i < 21:#высота
-#         for o in range (i): #длинна
-#             if o == 1:
-#                 print (a*20)
-#             if o == 2:
-#                 print (a + b + (a * 16) + b + a)
-#             if o == 3:
-#                 print (a + b*2 + (a * 14) + b*2 + a)
-#             if o == 4:
-#                 print (a + b*3 + (a * 12) + b*3 + a)
-#             if o == 5:
-#                 print (a + b*4 + (a * 10) + b*4 + a)
-#             if o == 6:
-#                 print (a + b*5 + (a * 8) + b*5 + a)
-#             if o == 7:
-#                 print (a + b*6 + (a * 6) + b*6 + a)
-#             if o == 8:
-#                 print (a + b*7 + (a * 4) + b*7 + a)
-#             if o == 9:
-#                 print (a + b*8 + (a * 2) + b*8 + a)
-#             if o == 20:
-#                 print (a*20)
-#             else:
-#                 print (a + b*18+ a)
-#         i += 1    
 
-n = 21
-for i in range(n): #рядок
-    for j in range(n): #висота рядка
-        for k in range(n): #стовбчик
-            for m in range(n):#ширина клітинки
-                if (i+k % 2 == 0):
-                    print(a,)
+print ('Вітаю, у мене е фігури які я можу вивести на єкран.\nВони позначаються буквами а,б,в,г,д.')
+choise = input ('Введіть ваш вибір:')
+if choise == 'a':
+
+    for i in range (10):#длинна
+        for o in range (10): #высота
+            if o < i:
+                print(b,end='')
+            else:
+                print (a,end = '' )
+        print ()   
+          
+if choise == 'б':
+
+    for i in range (10):
+        for o in range (10):
+            if i < o:
+                print (b,end = '')
+            else:
+                print (a, end = '')
+        print ()
+
+if choise == 'в':
+
+    for i in range (10):
+        for o in range (10):         
+            if o > (9 - i):
+                print(b, end = '')
+            else:
+                if o >= i:
+                    print(a, end = '')
                 else:
-                    print(a,)
-        print(1)
+                    print(b, end = '')
+        print ()
+        
+if choise == 'г':
+
+    for i in range (10):
+        for o in range (10):         
+            if o < (9 - i):
+                print(b, end = '')
+            else:
+                if o <= i:
+                    print(a, end = '')
+                else:
+                    print(b, end = '')
+        print ()
+
+if choise == 'д':
+
+    for i in range (10):
+        for o in range (10):
+            if o < (9 - i):
+                print(b, end = '')
+            else:
+                if o <= i:
+                    print(a, end = '')
+                else:
+                    print(b, end = '')
+            if o > (9 - i):
+                print(b, end = '')
+            else:
+                if o >= i:
+                    print(a, end = '')
+                else:
+                    print(b, end = '')         
+            # if o < (9 - i):
+            #     print(b, end = '')
+            # else:
+            #     if o <= i:
+            #         print(a, end = '')
+            #     else:
+            #         print(b, end = '')
+        print()
+
+
+# a = ' '
+# b = '*'
+
+# for i in range(10):
+#     for o in range(10):
+#         if i < (9 - o):
+#                 print(a, end = '')
+#         else:
+#                 if i <= o:
+#                     print(b, end = '')
+#                 else:
+#                     print(a, end = '')
+#         if i > (9 - o):
+#                 print(a, end = '')
+#         else:
+#                 if i >= o:
+#                     print(b, end = '')
+#                 else:
+#                     print(a, end = '') 
+        
+#     print()

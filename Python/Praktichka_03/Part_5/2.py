@@ -7,3 +7,14 @@
 # ---***---***---***---***
 # ---***---***---***---***
 
+n = int (input ('enter number:'))
+for i in range(n): #рядок
+    for j in range(n): #висота рядка
+        for k in range(n): #стовбчик
+            for m in range(n):#ширина клітинки
+                if (i+k) % 2 == 0:
+                    print('*',end='')
+                else:
+                    print('-',end='')
+        print()
+      

@@ -10,4 +10,6 @@ a = int (input ('ширина = '))
 h = int (input ('висота = '))
 
 for i in range (h):
-    print ('*'*a)
+    for o in range (a):
+        print ('*',end = '')
+    print ()

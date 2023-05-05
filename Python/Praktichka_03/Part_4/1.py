@@ -9,5 +9,7 @@
 
 n = int (input ('n = '))
 
-for i in range (0,n):
-    print ('*'*n)
+for i in range (n):
+    for o in range (n):
+        print ('*',end = '')
+    print()
