@@ -4,8 +4,6 @@
 
 String = input ('enter string:')
 word = input ('enter word for find:')
-sumwordwords = 0
-for i in String:
-    if i == word:
-        sumwordwords += 1
-print (''' your's word meets''', sumwordwords, 'times')
+sumwords = 0
+sumwords = String.count(word)
+print (''' your's word meets''', sumwords, 'times')
