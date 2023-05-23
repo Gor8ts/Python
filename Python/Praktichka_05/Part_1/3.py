@@ -2,11 +2,18 @@
 # Функция принимает в качестве параметра: длину линии, направление, символ.
 
 def line (lenght,napravlenie,symbol):
-    if (napravlenie):
-        print(lenght*symbol)
+    if napravlenie == 'горизонтальний':
+        for i in range(lenght):
+            print(symbol, end = '')
+        print()
+    elif napravlenie == 'вертикальний':
+        for o in range(lenght):
+            print(symbol)
     else:
-        end_l = '\n'
-        for i in (0,lenght):
-            print (symbol, end=end_l)
+        print('Невірний напрямок. Оберіть або вертикальний або горизонтальний')
+        
+   
 
-line (100,0,'*')
+line(10,'горизонтальний','*')
+line(10, "горизонтальний", "#")
+line(5, "вертикальний", "*")
