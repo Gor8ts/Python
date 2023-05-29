@@ -20,3 +20,8 @@ class Passport:
     def get_info():
         pass
     
+class ForeignPassport (Passport):
+    def __init__(self, name, surname, city, district, address, nop) -> None:
+        super().__init__(name, surname, city, district, address, nop, visa, numFP,)
+        self.visa = visa
+        
