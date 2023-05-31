@@ -34,9 +34,10 @@ class Country:
         self.phone_code_of_the_country = name
     def put_in_name_of_the_capital(self,name):
         self.name_of_the_capital = name
-    def put_in_name_of_the_cities_of_the_country(self,name):
-        self.name_of_the_cities_of_the_country = [name]
+    def put_in_name_of_the_cities_of_the_country(self,index,name):
+        self.name_of_the_cities_of_the_country[index] = name
 
 country = Country('Ukraine','Eurasija',52000000,'+380(000)000-00-00','Kiev',['Charkiv','Lviv','Donetsk','Cherson','Dnipro','Vugledar'])
 country.show_info()
-country.put_in_name_of_the_cities_of_the_country(2,'Dopetsk')
+country.put_in_name_of_the_cities_of_the_country(2,'Do')
+country.show_info()
