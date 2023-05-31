@@ -25,6 +25,7 @@ class Human:
         print (f'Familiya {self.familiya}\n Imja {self.imja}\n po batjkovi {self.po_batjkovi}\n'
                f'birthday date {self.birthday_date}\n number phone {self.number_phone}\n '
                f'city {self.city}\n country {self.country}\n home address {self.home_address}')
+        return
     
     def put_familiya(self, f):
         self.familiya = f
