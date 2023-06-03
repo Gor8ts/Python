@@ -8,10 +8,6 @@
 # методы.
 
 
-
-import re
-
-
 class Passport:
     def __init__(self,name,surname,city,district,address,nop) -> None:
         self.name = name
@@ -34,7 +30,6 @@ class ForeignPassport (Passport):
         self.visa = extend
 
     def get_info(self):
-
         return super().get_info() + [self.visa, self.numFP]
 
 foreign_passport = ForeignPassport('Kyzja','Pavlik','Kyiv', 'Obolonskiy', 'Miry 54','AH 38465','visa',85463408034)

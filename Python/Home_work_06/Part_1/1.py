@@ -30,3 +30,7 @@ class Car:
     def put_price(self, p):
         self.price = p
     
+my_car = Car('Lamba',2020,'China',2,'white',1000000)
+print(my_car.get_info())
+my_car.put_car_color('green')
+print (my_car.get_info())
