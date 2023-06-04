@@ -23,6 +23,8 @@ class Stadium:
         self.city = change
     def put_capacity(self,change):   
         self.capacity = change
+    def __str__(self):
+        return  'It is the largest stadium in the world with a total capacity of: ' + str(self.capacity)
 
 stadium = Stadium('Metallurg','not open now','Ukraine','Krivyi Rig',50000)
 stadium.put_capacity(40000)

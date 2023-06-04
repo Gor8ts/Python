@@ -70,3 +70,4 @@ print(table.count, new_table.count)
 info = new_table.get_info()
 print(len(table))
 
+print (new_table.__str__())

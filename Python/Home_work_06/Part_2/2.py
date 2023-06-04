@@ -25,6 +25,8 @@ class Book:
         self.author = change
     def put_price(self,change):
         self.price = change
+    def __str__(self):
+        return  'He is the world\'s most famous bestselling author.: ' + str(self.author)
 
 my_book = Book('Three Pigs',1923,'Kiyv pablish company','children\'s literature',\
                'I am aythor','190 uah')

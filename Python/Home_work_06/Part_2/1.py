@@ -16,7 +16,7 @@ class Car:
                 self.car_color, self.price]
 
     def __str__(self):
-        return  
+        return  'This is engine capaciti in car: ' + str(self.engine_capacity)
     def put_model_name(self, m):
         self.model_name = m
     def put_year_of_issue(self, y):
@@ -34,3 +34,4 @@ my_car = Car('Lamba',2020,'China',2,'white',1000000)
 print(my_car.get_info())
 my_car.put_car_color('green')
 print (my_car.get_info())
+print (my_car.__str__())
