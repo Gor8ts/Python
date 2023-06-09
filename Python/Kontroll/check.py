@@ -12,5 +12,5 @@ class Check(Receipt):
         super().show_info()
         print (f'date_of_receipt:{self.date_of_receipt}')
                
-check = Check('hj,b','43.56.89','franklin ruzvelt','nfgdjgfdk','bxjxjm','hgdddk')
-print(check.show_info())
+# check = Check('hj,b','43.56.89','franklin ruzvelt','nfgdjgfdk','bxjxjm','hgdddk')
+# print(check.show_info())
