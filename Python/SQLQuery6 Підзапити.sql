@@ -12,15 +12,25 @@ WHERE G.DepartmentId = D.id AND
 	  AND D.NameDepartment = 'Software Development') > 3
 
 SELECT G.NameGroup
-FROM Groups AS G,GroupsStudents AS GS, Students AS S
-WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND
-(SELECT AVG (Rating)
-FROM Students AS S,GroupsStudents AS GS,Groups AS G 
-WHERE G.id = GS.GroupId AND GS.StudentId = S.id ) > 
-(SELECT AVG(Rating) 
+FROM Groups AS G, Students, (SELECT NameGroup, AVG (CAST(Rating AS float)) AS Rat
+FROM Students AS S,GroupsStudents AS GS,Groups 
+WHERE Groups.id = GS.GroupId AND GS.StudentId = S.id
+GROUP BY NameGroup
+) AS RG
+WHERE 
+RG.Rat < 
+(SELECT AVG(CAST(Rating AS float)) 
 FROM Groups AS G,GroupsStudents AS GS,Students AS S
 WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND G.NameGroup = 'D221')
-GROUP BY NameGroup
+GROUP BY G.NameGroup
+
+SELECT AVG ( CAST(LectureId AS float))
+FROM GroupsLectures 
+
+
+
+
+
 
 SELECT NameTeacher+' '+SurnameTeacher AS 'Full Name'
 FROM Teachers
@@ -72,3 +82,14 @@ FROM Subjects,Lectures,GroupsLectures AS GL,Groups,Departments,GroupsStudents AS
 WHERE Subjects.id = Lectures.SubjectId AND Lectures.id = GL.LectureId AND GL.GroupId = Groups.id
 AND Groups.DepartmentId = Departments.id AND Groups.id = GS.GroupId AND GS.StudentId = Students.id
 AND Departments.NameDepartment = 'Software Development'
+
+SELECT COUNT(Students.id) AS COUNTSudent
+FROM Students,GroupsStudents AS GS, Groups,Departments
+WHERE Students.id = GS.StudentId AND GS.GroupId = Groups.id AND Groups.DepartmentId = Departments.id AND Departments.NameDepartment = 'Software Development'
+
+SELECT  NameSubject --COUNT(Subjects.id) AS COUNTSubject
+FROM Subjects,Lectures,GroupsLectures AS GL,Groups,Departments
+WHERE Subjects.id = Lectures.SubjectId AND Lectures.id = GL.LectureId AND GL.GroupId = Groups.id
+AND Groups.DepartmentId = Departments.id 
+AND Departments.NameDepartment = 'Software Development'
+ 
