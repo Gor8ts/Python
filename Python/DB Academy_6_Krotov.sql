@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Academy_6_Krotov]    Script Date: 28.06.2023 16:25:37 ******/
+/****** Object:  Database [Academy_6_Krotov]    Script Date: 01.07.2023 15:28:52 ******/
 CREATE DATABASE [Academy_6_Krotov]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -87,7 +87,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
 GO
 USE [Academy_6_Krotov]
 GO
-/****** Object:  Table [dbo].[Curators]    Script Date: 28.06.2023 16:25:37 ******/
+/****** Object:  Table [dbo].[Curators]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +102,7 @@ CREATE TABLE [dbo].[Curators](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Departments]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Departments]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -119,7 +119,7 @@ CREATE TABLE [dbo].[Departments](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Faculties]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Faculties]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -133,7 +133,7 @@ CREATE TABLE [dbo].[Faculties](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Groups]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Groups]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -149,7 +149,7 @@ CREATE TABLE [dbo].[Groups](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GroupsCurators]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[GroupsCurators]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -164,7 +164,7 @@ CREATE TABLE [dbo].[GroupsCurators](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GroupsLectures]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[GroupsLectures]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -179,7 +179,7 @@ CREATE TABLE [dbo].[GroupsLectures](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GroupsStudents]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[GroupsStudents]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,7 +194,7 @@ CREATE TABLE [dbo].[GroupsStudents](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Lectures]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Lectures]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -210,7 +210,7 @@ CREATE TABLE [dbo].[Lectures](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Students]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Students]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -226,7 +226,7 @@ CREATE TABLE [dbo].[Students](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Subjects]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Subjects]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -240,7 +240,7 @@ CREATE TABLE [dbo].[Subjects](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Teachers]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Table [dbo].[Teachers]    Script Date: 01.07.2023 15:28:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -331,7 +331,7 @@ INSERT [dbo].[Groups] ([id], [NameGroup], [Year], [DepartmentId]) VALUES (6, N'Z
 GO
 INSERT [dbo].[Groups] ([id], [NameGroup], [Year], [DepartmentId]) VALUES (7, N'Kuta', 5, 1)
 GO
-INSERT [dbo].[Groups] ([id], [NameGroup], [Year], [DepartmentId]) VALUES (8, N'Beta', 5, 4)
+INSERT [dbo].[Groups] ([id], [NameGroup], [Year], [DepartmentId]) VALUES (8, N'Beta', 5, 8)
 GO
 SET IDENTITY_INSERT [dbo].[Groups] OFF
 GO
@@ -356,6 +356,8 @@ GO
 INSERT [dbo].[GroupsCurators] ([id], [CuratorId], [GroupId]) VALUES (9, 9, 2)
 GO
 INSERT [dbo].[GroupsCurators] ([id], [CuratorId], [GroupId]) VALUES (10, 10, 5)
+GO
+INSERT [dbo].[GroupsCurators] ([id], [CuratorId], [GroupId]) VALUES (12, 4, 5)
 GO
 SET IDENTITY_INSERT [dbo].[GroupsCurators] OFF
 GO
@@ -461,6 +463,12 @@ INSERT [dbo].[Lectures] ([id], [Date], [SubjectId], [TeacherId]) VALUES (9, CAST
 GO
 INSERT [dbo].[Lectures] ([id], [Date], [SubjectId], [TeacherId]) VALUES (10, CAST(N'2023-06-16' AS Date), 10, 7)
 GO
+INSERT [dbo].[Lectures] ([id], [Date], [SubjectId], [TeacherId]) VALUES (11, CAST(N'2023-06-24' AS Date), 1, 1)
+GO
+INSERT [dbo].[Lectures] ([id], [Date], [SubjectId], [TeacherId]) VALUES (12, CAST(N'2023-06-23' AS Date), 2, 2)
+GO
+INSERT [dbo].[Lectures] ([id], [Date], [SubjectId], [TeacherId]) VALUES (13, CAST(N'2023-06-22' AS Date), 1, 3)
+GO
 SET IDENTITY_INSERT [dbo].[Lectures] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Students] ON 
@@ -565,7 +573,7 @@ SET IDENTITY_INSERT [dbo].[Teachers] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [Name]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Index [Name]    Script Date: 01.07.2023 15:28:53 ******/
 ALTER TABLE [dbo].[Departments] ADD  CONSTRAINT [Name] UNIQUE NONCLUSTERED 
 (
 	[NameDepartment] ASC
@@ -573,7 +581,7 @@ ALTER TABLE [dbo].[Departments] ADD  CONSTRAINT [Name] UNIQUE NONCLUSTERED
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [NameFaculties]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Index [NameFaculties]    Script Date: 01.07.2023 15:28:53 ******/
 ALTER TABLE [dbo].[Faculties] ADD  CONSTRAINT [NameFaculties] UNIQUE NONCLUSTERED 
 (
 	[NameFaculty] ASC
@@ -581,7 +589,7 @@ ALTER TABLE [dbo].[Faculties] ADD  CONSTRAINT [NameFaculties] UNIQUE NONCLUSTERE
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [NameGroup]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Index [NameGroup]    Script Date: 01.07.2023 15:28:53 ******/
 ALTER TABLE [dbo].[Groups] ADD  CONSTRAINT [NameGroup] UNIQUE NONCLUSTERED 
 (
 	[NameGroup] ASC
@@ -589,7 +597,7 @@ ALTER TABLE [dbo].[Groups] ADD  CONSTRAINT [NameGroup] UNIQUE NONCLUSTERED
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [NameSubject]    Script Date: 28.06.2023 16:25:38 ******/
+/****** Object:  Index [NameSubject]    Script Date: 01.07.2023 15:28:53 ******/
 ALTER TABLE [dbo].[Subjects] ADD  CONSTRAINT [NameSubject] UNIQUE NONCLUSTERED 
 (
 	[NameSubject] ASC
