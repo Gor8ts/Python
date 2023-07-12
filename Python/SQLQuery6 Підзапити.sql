@@ -15,6 +15,7 @@ WHERE G.DepartmentId = D.id AND
 
 --¬ивести назви груп, €к≥ мають рейтинг (середн≥й рейтинг ус≥х студент≥в групи) б≥льший, н≥ж рейтинг групи УD221Ф
 SELECT G.NameGroup
+<<<<<<< HEAD
 FROM Groups AS G,GroupsStudents AS GS, Students AS S
 WHERE G.id = GS.GroupId AND GS.StudentId = S.id
 GROUP BY G.NameGroup
@@ -22,6 +23,27 @@ HAVING AVG(S.Rating)<
 (SELECT AVG(Rating) 
 FROM Groups AS G,GroupsStudents AS GS,Students AS S
 WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND G.NameGroup = 'D221')
+=======
+FROM Groups AS G, Students, (SELECT NameGroup, AVG (CAST(Rating AS float)) AS Rat
+FROM Students AS S,GroupsStudents AS GS,Groups 
+WHERE Groups.id = GS.GroupId AND GS.StudentId = S.id
+GROUP BY NameGroup
+) AS RG
+WHERE 
+RG.Rat < 
+(SELECT AVG(CAST(Rating AS float)) 
+FROM Groups AS G,GroupsStudents AS GS,Students AS S
+WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND G.NameGroup = 'D221')
+GROUP BY G.NameGroup
+
+SELECT AVG ( CAST(LectureId AS float))
+FROM GroupsLectures 
+
+
+
+
+
+>>>>>>> 1afaefa461f75af874ff792106d4a0319f3be566
 
 --¬ивести пр≥звища та ≥мена викладач≥в, ставка €ких вища за середню ставку професор≥в.
 SELECT NameTeacher+' '+SurnameTeacher AS 'Full Name'
@@ -84,4 +106,18 @@ FROM Subjects,Lectures,GroupsLectures AS GL,Groups,Departments,GroupsStudents AS
 WHERE Subjects.id = Lectures.SubjectId AND Lectures.id = GL.LectureId AND GL.GroupId = Groups.id
 AND Groups.DepartmentId = Departments.id AND Groups.id = GS.GroupId AND GS.StudentId = Students.id
 AND Departments.NameDepartment = 'Software Development'
+<<<<<<< HEAD
 GROUP BY NameSubject,Departments.NameDepartment
+=======
+
+SELECT COUNT(Students.id) AS COUNTSudent
+FROM Students,GroupsStudents AS GS, Groups,Departments
+WHERE Students.id = GS.StudentId AND GS.GroupId = Groups.id AND Groups.DepartmentId = Departments.id AND Departments.NameDepartment = 'Software Development'
+
+SELECT  NameSubject --COUNT(Subjects.id) AS COUNTSubject
+FROM Subjects,Lectures,GroupsLectures AS GL,Groups,Departments
+WHERE Subjects.id = Lectures.SubjectId AND Lectures.id = GL.LectureId AND GL.GroupId = Groups.id
+AND Groups.DepartmentId = Departments.id 
+AND Departments.NameDepartment = 'Software Development'
+ 
+>>>>>>> 1afaefa461f75af874ff792106d4a0319f3be566
