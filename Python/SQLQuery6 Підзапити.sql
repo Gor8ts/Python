@@ -17,6 +17,7 @@ WHERE G.DepartmentId = D.id AND
 SELECT G.NameGroup
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 FROM Groups AS G,GroupsStudents AS GS, Students AS S
 WHERE G.id = GS.GroupId AND GS.StudentId = S.id
 GROUP BY G.NameGroup
@@ -48,6 +49,27 @@ RG.Rat <
 FROM Groups AS G,GroupsStudents AS GS,Students AS S
 WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND G.NameGroup = 'D221')
 GROUP BY G.NameGroup
+=======
+FROM Groups AS G, Students, (SELECT NameGroup, AVG (CAST(Rating AS float)) AS Rat
+FROM Students AS S,GroupsStudents AS GS,Groups 
+WHERE Groups.id = GS.GroupId AND GS.StudentId = S.id
+GROUP BY NameGroup
+) AS RG
+WHERE 
+RG.Rat < 
+(SELECT AVG(CAST(Rating AS float)) 
+FROM Groups AS G,GroupsStudents AS GS,Students AS S
+WHERE G.id = GS.GroupId AND GS.StudentId = S.id AND G.NameGroup = 'D221')
+GROUP BY G.NameGroup
+
+SELECT AVG ( CAST(LectureId AS float))
+FROM GroupsLectures 
+
+
+
+
+
+>>>>>>> 437bd45d1a32a2e824a05ced4e4da465967dc7ab
 
 SELECT AVG ( CAST(LectureId AS float))
 FROM GroupsLectures 
@@ -130,8 +152,11 @@ AND Groups.DepartmentId = Departments.id AND Groups.id = GS.GroupId AND GS.Stude
 AND Departments.NameDepartment = 'Software Development'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 GROUP BY NameSubject,Departments.NameDepartment
 =======
+=======
+>>>>>>> 437bd45d1a32a2e824a05ced4e4da465967dc7ab
 =======
 >>>>>>> 437bd45d1a32a2e824a05ced4e4da465967dc7ab
 
@@ -145,8 +170,12 @@ WHERE Subjects.id = Lectures.SubjectId AND Lectures.id = GL.LectureId AND GL.Gro
 AND Groups.DepartmentId = Departments.id 
 AND Departments.NameDepartment = 'Software Development'
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 >>>>>>> 1afaefa461f75af874ff792106d4a0319f3be566
+=======
+ 
+>>>>>>> 437bd45d1a32a2e824a05ced4e4da465967dc7ab
 =======
  
 >>>>>>> 437bd45d1a32a2e824a05ced4e4da465967dc7ab
